@@ -42,7 +42,7 @@ public class emailservice {
 		
 	}
 	
-	public ResponseEntity<String> emailWithAttachment(email e) throws MessagingException {
+	public ResponseEntity<String> emailWithAttachment(email e)  {
 		
 		try {
 		MimeMessage mimemessage = javamailsender.createMimeMessage();

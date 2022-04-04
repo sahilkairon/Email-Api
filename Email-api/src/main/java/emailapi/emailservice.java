@@ -26,7 +26,8 @@ public class emailservice {
 	public ResponseEntity<String> sendSimpleEmail(email e) {
 		try {
 		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom("springboot020@gmail.com");
+// 			Add sender email here ----
+		message.setFrom("add sender email address here");
 		message.setTo(e.getToEmail());
 		message.setText(e.getBody());
 		message.setSubject(e.getSubject());
@@ -48,8 +49,8 @@ public class emailservice {
 		MimeMessage mimemessage = javamailsender.createMimeMessage();
 		
 		MimeMessageHelper helper = new MimeMessageHelper(mimemessage, true);
-		
-		helper.setFrom("springboot020@gmail.com");
+// 		add sender email address here 
+		helper.setFrom("add sender email address here");
 		helper.setTo(e.getToEmail());
 		helper.setText(e.getBody());
 		helper.setSubject(e.getSubject());
